@@ -32,7 +32,10 @@ export class TimeBlockService {
     })
   }
 
-  async update(dto: Partial<TimeBlockDto>, TimeBlockId: string, userId: string) {
+  async update(
+    dto: Partial<TimeBlockDto>,
+     TimeBlockId: string,
+      userId: string) {
     return this.prisma.timeBlock.update({
       where: {
         userId,

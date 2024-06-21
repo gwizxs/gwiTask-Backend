@@ -22,6 +22,19 @@ export class TimeBlockController {
   async create(@Body() dto: TimeBlockDto, @CurrentUser('id') userId: string) {
     return this.timeBlockService.create(dto, userId);
   }
+  
+  @UsePipes(new ValidationPipe())
+  @HttpCode(200)
+  @Put(':id')
+  @Auth()
+  async update(
+    @Body() dto: TimeBlockDto,
+    @CurrentUser('id') userId: string,
+    @Param('id') id: string
+  ) {
+    return this.timeBlockService.update(dto, id, userId)
+  }
+
 
   @UsePipes(new ValidationPipe())
   @HttpCode(200)
