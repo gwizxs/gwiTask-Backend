@@ -175,7 +175,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\User\\Documents\\GitHub\\Backend\\backend\\prisma\\generated\\client",
+      "value": "C:\\old-projects\\gwiTask-Backend\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
