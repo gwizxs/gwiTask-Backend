@@ -12,11 +12,13 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
   app.use(cookieParser());
   app.use(cors({
-    origin: ['*'], 
+    origin: ['http://localhost:5173', 'https://gwi-tasks.vercel.app'], 
     credentials: true, 
-    exposedHeaders: 'set-cookie', 
+    exposedHeaders: 'set-cookie',
+    preflightContinue: false
   }));
 
   await app.listen(3000);
 }
 bootstrap();
+

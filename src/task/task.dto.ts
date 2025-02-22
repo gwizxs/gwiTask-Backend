@@ -1,6 +1,7 @@
 import { Transform } from "class-transformer";
 import { IsBoolean, IsOptional, IsEnum, IsString } from "class-validator";
-import { Priority } from "prisma/generated/client";
+import { Priority } from "../../prisma/generated/client";
+
 
 export class TaskDto {
   @IsString()

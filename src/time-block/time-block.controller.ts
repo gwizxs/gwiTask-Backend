@@ -1,8 +1,8 @@
 import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put, UsePipes, ValidationPipe } from '@nestjs/common';
 import { TimeBlockService } from './time-block.service';
-import { CurrentUser } from 'src/auth/decorators/user.decorator';
+import { CurrentUser } from 'auth/decorators/user.decorator';
 import { TimeBlockDto } from './dto/time-block.dto';
-import { Auth } from 'src/auth/decorators/auth.decorator';
+import { Auth } from 'auth/decorators/auth.decorator';
 import { UpdateOrderDto } from './dto/update-order.dto';
 
 @Controller('user/time-blocks/')
